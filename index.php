@@ -14,15 +14,31 @@
    ?></p>
    <p><?php
 $depart = array(
-  "Aisne" => "02",
-  "Nord" => "59",
-  "Oise" => "60",
-  "Pas-de-calais" => "62",
-  "Somme" => "80",
+  "02" => "Aisne",
+  "59" => "Nord",
+  "60" => "Oise",
+  "62" => "Pas-de-calais",
+  "80" => "Somme",
+
 );
 
-echo $depart {"Aisne"};
-    ?></p>
+echo $depart {"59"};
+$depart["51"] = "Marne";
 
+    ?></p>
+    <p><?php
+foreach ($tableau as $tableau){
+  echo "<li>$tableau</li>";
+}
+?></p>
+<p><?php
+echo implode("<br>", $depart);
+     ?><p>
+       <p><?php
+
+       foreach($depart as $index => $valeur){
+     echo ("<br>". 'Le département ' .$valeur. ' a pour numéro ' .$index);
+ }
+        ?><p>
 </body>
 </html>
